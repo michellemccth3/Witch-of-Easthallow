@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubeMonsterHealth : MonoBehaviour
 {
     float health;
+    public AudioSource collided;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class CubeMonsterHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "Spell") //|| collision.gameObject.tag == "Wall")
         {
+            collided.Play();
             health -= 1;
             print(health);
         }

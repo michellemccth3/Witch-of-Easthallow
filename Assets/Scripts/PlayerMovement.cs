@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioSource jump;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
         float vert = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(hori, vert);
         transform.Translate(movement * speed * Time.deltaTime);
-        
+        if(Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)){
+            jump.Play();
+        }
     }
 }
