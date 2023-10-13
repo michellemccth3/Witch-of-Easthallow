@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Spell
+  - Wall
+  - Monster
+  - Wall Right
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Monster 1
+  - Water
+  - UI
+  - Witch
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Spells
+    uniqueID: 1783392855
+    locked: 0
+  - name: Monster
+    uniqueID: 2366614387
+    locked: 0
+  - name: Witch
+    uniqueID: 504501883
+    locked: 0
