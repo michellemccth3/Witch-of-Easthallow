@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using UnityEngine.Audio;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    //public AudioClip death;
+    public AudioSource owSound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //GetComponent<AudioSource> ().playOnAwake = false;
+		//GetComponent<AudioSource> ().clip = death;
     }
 
     // Update is called once per frame
@@ -18,8 +22,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "Monster")
         {
+            owSound.Play();
             health -= 5*Time.deltaTime;
             print(health);
+            //owSound.Play();
         }
         
     }
@@ -31,6 +37,12 @@ public class PlayerHealth : MonoBehaviour
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
             //SceneManager.LoadScene("Main Menu");
+            //AudioSource audio = GetComponent<AudioSource>();
+            //audio.clip = death;
+            //audio.Play();
+            //death.Play();
+            //GetComponent<AudioSource> ().Play ();
+            //deathSound.Play();
         }
         if(GameObject.FindGameObjectsWithTag("Monster").Length == 0)
         {
