@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpellHealth : MonoBehaviour
 {
+    public AudioSource spellSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,9 @@ public class SpellHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "Monster")
         {
+            //spellSound.Play();
             Destroy(gameObject);
+            //spellSound.Play();
         }
     }
 }
